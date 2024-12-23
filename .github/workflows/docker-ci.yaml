@@ -1,4 +1,4 @@
-name: Docker Base Image CI
+name: Docker CI
 
 on:
   push:
@@ -15,12 +15,11 @@ on:
       - "Dockerfile.rocm.base"
   pull_request:
     branches: [main]
-    paths-ignore:
-      - "Dockerfile.rocm.base"
     paths:
       - "Dockerfile"
       - "Dockerfile.*"
       - ".github/workflows/docker-ci.yaml"
+      - "!Dockerfile.rocm.base"
 
 jobs:
   publish-docker:
