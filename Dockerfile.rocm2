@@ -1,4 +1,6 @@
-ARG BASE_IMAGE=vllm-rocm-fa-0-base-3
+ARG BASE_IMAGE=micheliac/vllm-base:latest
+
+FROM $BASE_IMAGE
 
 ARG TARGETPLATFORM
 ENV DEBIAN_FRONTEND=noninteractive
