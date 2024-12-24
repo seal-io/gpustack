@@ -16,7 +16,7 @@ jobs:
       contents: write
       actions: read
       id-token: write
-    timeout-minutes: 60
+    timeout-minutes: 180
     runs-on: ubuntu-22.04-16c64g
     env:
       PACKAGE_REGISTRY: ${{ vars.PACKAGE_REGISTRY || 'gpustack'}}
